@@ -1,6 +1,7 @@
 // import './App.css';
-import './calculations'
-import Form from './components/form'
+import './components/Calculations'
+import Form from './components/Form';
+import Result from './components/Result';
 import formula from './formula.png';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         </p>
         <section>
           <Form/>
+          <Result/>
         </section>
       </article>
     </div>
