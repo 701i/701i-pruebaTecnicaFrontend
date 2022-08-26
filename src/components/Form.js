@@ -1,10 +1,11 @@
 import React from "react";
 
-export const Form = () => {
-  let result = 100
+export const Form = (inValue, setInvalue) => {
+
   function handleSubmit(e){
     e.preventDefault()
-    result++
+    console.log(e.target[0].value);
+    setInvalue(e.target[0].value);
   }
 
   return (
