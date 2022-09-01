@@ -1,15 +1,11 @@
-import React from 'react';
-import {calcs} from './components/Calculations'
+import React, { useState } from 'react';
 import Form from './components/Form';
 import Result from './components/Result';
 import formula from './formula.png';
-
 function App() {
-  const [result, setResult] = React.useState('')
-  const [inValue, setInvalue] = React.useState('esperando numero')
+  const [value, setValue] = useState('(esperando numero)');
   return (
     <div className="App">
-      <calcs/>
       <header className="App-header">
         <h1>Calculadora de series</h1>
       </header>
@@ -19,14 +15,8 @@ function App() {
           Introduce un numero y tu resultado sera acorde a esta formula
         </p>
         <section>
-          <Form
-           inValue={inValue}
-           setInvalue={setInvalue}
-          />
-          <Result
-            result={result}
-            setResult={setResult}
-            />
+          <Form set={setValue}/>
+          <Result value={value} />
         </section>
       </article>
     </div>

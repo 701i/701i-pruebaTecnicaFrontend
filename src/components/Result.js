@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Result = (inValue, setinValue) => {
+export const Result = (props) => {
   return (
     <>
-      {/* <p>{inValue}</p> */}
+      <p>Tu resultado: {props.value}</p>
     </>
   );
 };
